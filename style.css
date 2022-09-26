@@ -1,0 +1,404 @@
+   .container {
+       display: block;
+       margin: auto;
+       width: 530px
+   }
+   
+   .form-login {
+       width: 500px;
+   }
+   
+   .form-login__user,
+   .form-login__password {
+       width: 500px;
+       position: relative;
+   }
+   
+   .form-login__password-input {
+       width: 500px;
+       padding-left: 30px
+   }
+   
+   .form-login__user-input {
+       width: 500px;
+       padding-left: 30px;
+   }
+   
+   .form-login__btn {
+       width: 500px;
+   }
+   
+   .form-register__input {
+       width: 500px;
+       padding-left: 30px;
+   }
+   
+   .form-register__btn {
+       width: 500px;
+       text-align: center;
+   }
+   
+   .form-input__btn {
+       text-align: center;
+   }
+   
+   .form-input__btn .btn {
+       min-width: 84px;
+       min-height: 38px;
+       font-weight: 600;
+   }
+   
+   .heading-login {
+       display: block;
+       margin: 0 auto;
+       text-align: center;
+   }
+   
+   #menu {
+       position: absolute;
+       top: 30px;
+       right: 40px;
+       width: 152px;
+       z-index: 2;
+   }
+   
+   .sub-menu {
+       min-height: 60px;
+       min-width: 180px;
+       list-style-type: none;
+       background-color: #fff;
+       padding-left: 0px;
+       border-radius: 5px 5px;
+       box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+       text-align: center;
+       word-spacing: 2px;
+       font-weight: bold;
+       display: none;
+   }
+   
+   #menu:hover .sub-menu {
+       display: block;
+       animation: settingFadeIn ease .5s;
+   }
+   
+   #menu .menu-user {
+       font-weight: bold;
+       cursor: pointer;
+       display: flex;
+       justify-content: end;
+   }
+   
+   #menu .iconUser {
+       padding-left: 5px;
+       cursor: pointer;
+       padding-top: 2px;
+   }
+   
+   #menu .sub-menu li a:hover {
+       color: #281ba4;
+   }
+   
+   #menu .sub-menu li {
+       padding-top: 5px;
+       padding-bottom: 5px;
+   }
+   
+   #menu .sub-menu li:not(:last-child) {
+       border-bottom: 1px solid #ccc;
+   }
+   
+   #menu .sub-menu a {
+       cursor: pointer;
+       color: black;
+       text-decoration: none;
+       margin-top: 50px;
+   }
+   
+   .form-group {
+       position: relative;
+   }
+   
+   .form-group .firstGly {
+       position: absolute;
+       padding: 10px;
+       left: 0px;
+       top: 25px
+   }
+   
+   .addon-password .glyphicon-eye-open,
+   .addon-password .glyphicon-eye-close {
+       position: absolute;
+       padding: 10px;
+       top: 25px;
+       cursor: pointer;
+       right: 0px;
+   }
+   
+   .addon-search {
+       position: relative;
+   }
+   
+   .addon-search .glyphicon {
+       position: absolute;
+       padding: 10px;
+       pointer-events: none;
+       left: 0px;
+       top: -5px
+   }
+   
+   .iconLogOut,
+   .iconRegister,
+   .iconCpwd,
+   .iconComment {
+       padding-right: 5px;
+   }
+   
+   .cpwd {
+       position: fixed;
+       z-index: 4;
+       top: 0;
+       right: 0;
+       left: 0;
+       bottom: 0;
+       background-color: rgba(0, 0, 0, 0.4);
+       display: none;
+       align-items: center;
+       justify-content: center;
+   }
+   
+   .cpwd.open {
+       display: flex;
+   }
+   
+   .cpwd-header {
+       background: #337ab7;
+       height: 100px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 30px;
+       color: #fff;
+       border-radius: 10px 10px 0px 0px;
+   }
+   
+   .cpwd-container {
+       background-color: #fff;
+       width: 900px;
+       max-width: calc(100% - 32px);
+       min-height: 200px;
+       position: relative;
+       animation: cpwdFadeIn ease .5s;
+       border-radius: 10px 10px 10px 10px
+   }
+   
+   .cpwd-heading-bag {
+       margin: 15px;
+   }
+   
+   .cpwd-close {
+       color: #fff;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       padding: 12px;
+       cursor: pointer;
+       opacity: 0.8;
+   }
+   
+   .cpwd-close:hover {
+       opacity: 1;
+   }
+   
+   .cpwd-body {
+       padding: 16px;
+   }
+   
+   .cpwd-label {
+       font-size: 15px;
+       display: block;
+       margin-bottom: 12px;
+   }
+   
+   .cpwd-input {
+       border: 1px solid #ccc;
+       width: 100%;
+       font-size: 15px;
+       padding: 10px;
+       margin-bottom: 20px;
+   }
+   
+   #cpwd-confirm {
+       background-color: #337ab7;
+       border: none;
+       color: #fff;
+       width: 100%;
+       font-weight: 700;
+       text-transform: uppercase;
+       font-size: 15px;
+       padding: 17px;
+   }
+   
+   #cpwd-confirm:hover {
+       opacity: 0.9;
+       cursor: pointer;
+   }
+   
+   .cpwd-footer {
+       text-align: right;
+       padding: 16px;
+   }
+   
+   .cpwd a {
+       color: #2196f3;
+   }
+   
+   @keyframes cpwdFadeIn {
+       from {
+           transform: translateY(-200px);
+           opacity: 0;
+       }
+       to {
+           transform: translateY(0px);
+           opacity: 1;
+       }
+   }
+   
+   @keyframes settingFadeIn {
+       from {
+           transform: translateY(15px);
+           opacity: 0;
+       }
+       to {
+           transform: translateY(0px);
+           opacity: 1;
+       }
+   }
+   
+   .turnBack {
+       display: inline-block;
+       position: absolute;
+       right: 44px;
+       line-height: 42.844px;
+       font-weight: bold;
+   }
+   
+   .turnBack>a {
+       color: #fff;
+   }
+   /* Css góp ý */
+   
+   .comment {
+       position: fixed;
+       z-index: 4;
+       top: 0;
+       right: 0;
+       left: 0;
+       bottom: 0;
+       background-color: rgba(0, 0, 0, 0.4);
+       display: none;
+       align-items: center;
+       justify-content: center;
+   }
+   
+   .comment.open {
+       display: flex;
+   }
+   
+   .comment-header {
+       background: #337ab7;
+       height: 100px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 30px;
+       color: #fff;
+       border-radius: 10px 10px 0px 0px;
+   }
+   
+   .comment-container {
+       background-color: #fff;
+       width: 900px;
+       max-width: calc(100% - 32px);
+       min-height: 200px;
+       position: relative;
+       animation: commentFadeIn ease .5s;
+       border-radius: 10px 10px 10px 10px
+   }
+   
+   .comment-heading-bag {
+       margin: 15px;
+   }
+   
+   .comment-close {
+       color: #fff;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       padding: 12px;
+       cursor: pointer;
+       opacity: 0.8;
+   }
+   
+   .comment-close:hover {
+       opacity: 1;
+   }
+   
+   .comment-body {
+       padding: 16px;
+   }
+   
+   .comment-label {
+       font-size: 15px;
+       display: block;
+       margin-bottom: 12px;
+   }
+   
+   .comment-input {
+       border: 1px solid #ccc;
+       width: 100%;
+       font-size: 15px;
+       padding: 10px;
+       margin-bottom: 20px;
+   }
+   
+   #comment-confirm {
+       background-color: #337ab7;
+       border: none;
+       color: #fff;
+       width: 100%;
+       font-weight: 700;
+       text-transform: uppercase;
+       font-size: 15px;
+       padding: 17px;
+   }
+   
+   #comment-confirm:hover {
+       opacity: 0.9;
+       cursor: pointer;
+   }
+   
+   .comment-footer {
+       text-align: right;
+       padding: 16px;
+   }
+   
+   .comment a {
+       color: #2196f3;
+   }
+   
+   @keyframes commentFadeIn {
+       from {
+           transform: translateY(-200px);
+           opacity: 0;
+       }
+       to {
+           transform: translateY(0px);
+           opacity: 1;
+       }
+   }
+   
+   @media (max-width:740px) {
+       .mobile-full-width {
+           width: 100%
+       }
+   }
